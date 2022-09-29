@@ -6,7 +6,7 @@ request(`https://api.thecatapi.com/v1/breeds/search?q=${input}`, (error, respons
     console.log('error: ', error)
   }
   const data = JSON.parse(body);
-  if (data === undefined){
+  if (data[0] === undefined){
     console.log("Breed not found!")
   }
   console.log(data)
